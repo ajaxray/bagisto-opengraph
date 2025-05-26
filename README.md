@@ -9,6 +9,7 @@ This package allows you to easily add Open Graph meta tags to your Bagisto e-com
 ## Features
 
 - Easy integration with Bagisto
+- Setting Open Graph Image, Title, Description etc. from Bagisto settings panel
 - Dynamic Open Graph meta tag generation
 - Inject meta tags only if not set by Bagisto (because Bagisto sets them for some pages)
 
@@ -22,7 +23,7 @@ composer require ajaxray/opengraph
 ## Usage
 
 Once the package is installed, you can set Social preview image in your Bagisto admin panel.
-Go to `Configuration > Design > Social Preview Image` and set the image.
+Go to `Configuration > Design > Social Preview Image` and set the image and other details.
 
 ![Social Preview Image](media/bagisto-opengraph.png)
 
