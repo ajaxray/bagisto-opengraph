@@ -1,0 +1,26 @@
+{
+    "name": "ajaxray/bagisto-opengraph",
+    "description": "Setting OpenGraph meta tags for your Bagisto store.",
+    "type": "bagisto-module",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anis Uddin Ahmad",
+            "email": "anis.programmer@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ajaxray\\OpenGraph\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ajaxray\\OpenGraph\\Providers\\OpenGraphServiceProvider"
+            ]
+        }
+    }
+} 
