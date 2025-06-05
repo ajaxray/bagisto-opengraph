@@ -27,6 +27,21 @@ Go to `Configuration > Design > Social Preview Image` and set the image and othe
 
 ![Social Preview Image](media/bagisto-opengraph.png)
 
+## Troubleshooting 
+
+Even though the package is pushing the `\Ajaxray\OpenGraph\Http\Middleware\InjectOpenGraphTags` middlewire in the `web` middlewireGroup, in some cases it dosen't work. If you face the same issue, just add the middlewire manually in the `app/Http/Kernel.php` file.
+
+```php
+protected $middlewareGroups = [
+    'web' => [
+        // Other middlewires ...
+        \Ajaxray\OpenGraph\Http\Middleware\InjectOpenGraphTags::class,
+    ],
+    
+    // Other groups
+];
+```
+
 ## Support
 If you have any issues or questions, please open an issue at the [GitHub issues](https://github.com/ajaxray/bagisto-opengraph/issues).
 
