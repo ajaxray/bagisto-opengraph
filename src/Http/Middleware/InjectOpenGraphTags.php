@@ -15,21 +15,25 @@ class InjectOpenGraphTags
             $content = $response->getContent();
             
             $content = $this->injectOpenGraphTag($content, 'og:type', 'website');
+            $content = $this->injectOpenGraphTag($content, 'twitter:card', 'summary_large_image');
 
             $ogImage = core()->getConfigData('general.design.social-preview.image');
             if ($ogImage) {
                 $imageUrl = asset('storage/' . $ogImage);
                 $content = $this->injectOpenGraphTag($content, 'og:image', $imageUrl);
+                $content = $this->injectOpenGraphTag($content, 'twitter:image', $imageUrl);
             }
 
             $titleValue = core()->getConfigData('general.design.social-preview.title');
             if ($titleValue) {
                 $content = $this->injectOpenGraphTag($content, 'og:title', $titleValue);
+                $content = $this->injectOpenGraphTag($content, 'twitter:title', $titleValue);
             }
 
             $descriptionValue = core()->getConfigData('general.design.social-preview.description');
             if ($descriptionValue) {
                 $content = $this->injectOpenGraphTag($content, 'og:description', $descriptionValue);
+                $content = $this->injectOpenGraphTag($content, 'twitter:description', $descriptionValue);
             }
 
             $response->setContent($content);

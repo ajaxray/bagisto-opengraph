@@ -10,6 +10,7 @@ This package allows you to easily add Open Graph meta tags to your Bagisto e-com
 
 - Easy integration with Bagisto
 - Setting Open Graph Image, Title, Description etc. from Bagisto settings panel
+- Add twitter sharing meta tags along with og tags.
 - Dynamic Open Graph meta tag generation
 - Inject meta tags only if not set by Bagisto (because Bagisto sets them for some pages)
 
@@ -24,8 +25,10 @@ composer require ajaxray/opengraph
 
 Once the package is installed, you can set Social preview image in your Bagisto admin panel.
 Go to `Configuration > Design > Social Preview Image` and set the image and other details.
-
 ![Social Preview Image](media/bagisto-opengraph.png)
+
+Then, it'll phsh the `og:*` and `twitter:*` meta tags in the `<head>`.
+![Social Preview Tags](media/bagisto-opengraph-tags.png)
 
 ## Troubleshooting 
 
@@ -53,3 +56,6 @@ Thank you for considering contributing to the OpenGraph package! Please read our
 
 ## Security
 If you discover any security-related issues, please email me directly at anis(dot)programmer(at)gmail(dot)com.
+
+---
+🇵🇸 Gaza needs [your support](https://islamic-relief.org/appeals/palestine-emergency-appeal/).
